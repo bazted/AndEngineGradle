@@ -1,8 +1,10 @@
 apply plugin: 'android-library'
 apply from: '../../tools-versions.gradle'
 android {
-    compileSdkVersion 19
-    buildToolsVersion "19.0.3"
+
+    sourceSets.main {
+        jni.srcDirs = []
+    }
 
     defaultConfig {
         ndk {
