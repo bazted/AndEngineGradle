@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X6 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100%" height="100%" version="1.1" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
+viewBox="0 0 532 3502"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+    <radialGradient id="id0" gradientUnits="userSpaceOnUse" cx="266" cy="1751.05" r="240" fx="266" fy="1751.05">
+     <stop offset="0" stop-color="#FEFEFE"/>
+     <stop offset="1" stop-color="#2B2A29"/>
+    </radialGradient>
+ </defs>
+ <g id="Warstwa_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_594120528">
+   <polygon fill="#E31E24" stroke="#2B2A29" stroke-width="7.62" points="4,1751 266,25 528,1751 "/>
+   <polygon fill="#008DD2" stroke="#2B2A29" stroke-width="7.62" points="4,1751 266,3477 528,1751 "/>
+   <polygon fill="url(#id0)" stroke="#2B2A29" stroke-width="7.62" points="128,1888 158,1912 191,1931 227,1943 266,1945 305,1943 341,1931 374,1912 404,1888 428,1860 445,1825 457,1789 461,1752 457,1714 445,1677 428,1645 404,1614 374,1590 341,1571 305,1561 266,1557 227,1561 191,1571 158,1590 128,1614 106,1645 87,1677 75,1714 71,1752 75,1789 87,1825 106,1860 "/>
+  </g>
+ </g>
+</svg>
