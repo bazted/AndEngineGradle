@@ -23,6 +23,6 @@ public interface ITrie {
 
     public boolean contains(final CharSequence pCharSequence, final int pStart, final int pEnd);
     /* TODO public void clear(); */
-	/* TODO public boolean remove(final CharSequence pCharSequence); */
-	/* TODO public boolean remove(final CharSequence pCharSequence, final int pStart, final int pEnd); */
+    /* TODO public boolean remove(final CharSequence pCharSequence); */
+    /* TODO public boolean remove(final CharSequence pCharSequence, final int pStart, final int pEnd); */
 }

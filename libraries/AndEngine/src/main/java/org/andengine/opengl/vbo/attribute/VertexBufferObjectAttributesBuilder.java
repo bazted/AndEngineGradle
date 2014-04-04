@@ -81,7 +81,7 @@ public class VertexBufferObjectAttributesBuilder {
 
     public VertexBufferObjectAttributes build() {
         if (this.mIndex != this.mVertexBufferObjectAttributes.length) {
-            throw new AndEngineRuntimeException("Not enough " + VertexBufferObjectAttribute.class.getSimpleName() + "s added to this " + this.getClass().getSimpleName() + ".");
+            throw new AndEngineRuntimeException("Not enough " + VertexBufferObjectAttribute.class.getSimpleName() + "s added to this " + this.getClass().getSimpleName() + "");
         }
 
         return new VertexBufferObjectAttributes(this.mOffset, this.mVertexBufferObjectAttributes);

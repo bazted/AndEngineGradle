@@ -156,7 +156,7 @@ public class TextMenuItem extends Text implements IMenuItem {
 
     @Override
     public void onUnselected() {
-		/* Nothing. */
+        /* Nothing. */
     }
 
     // ===========================================================

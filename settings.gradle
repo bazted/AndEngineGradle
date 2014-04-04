@@ -1,2 +1,4 @@
 include ':android'
-include ':libraries:AndEngine'
+include ':libraries:andEnginePhysicsBox2DExtension'
+include ':libraries:andEngine'
+include ':libraries:andEngineSVGTextureRegionExtension'

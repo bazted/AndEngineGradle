@@ -1,0 +1,19 @@
+apply plugin: 'android-library'
+apply from: '../../tools-versions.gradle'
+android {
+
+    sourceSets.main {
+        jni.srcDirs = []
+    }
+
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile project(':libraries:andEngine')
+}

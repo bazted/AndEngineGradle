@@ -134,7 +134,7 @@ public class LevelLoader {
             /* Doesn't happen. */
         } catch (final ParserConfigurationException pe) {
             Debug.e(pe);
-			/* Doesn't happen. */
+            /* Doesn't happen. */
         } finally {
             StreamUtils.close(pInputStream);
         }

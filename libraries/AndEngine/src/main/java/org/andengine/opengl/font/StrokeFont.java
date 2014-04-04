@@ -82,7 +82,7 @@ public class StrokeFont extends Font {
         if (!this.mStrokeOnly) {
             super.drawLetter(pCharacterAsString, pLeft, pTop);
         }
-        this.mCanvas.drawText(pCharacterAsString, pLeft + Font.LETTER_TEXTURE_PADDING, pTop + Font.LETTER_TEXTURE_PADDING, this.mStrokePaint);
+        this.mCanvas.drawText(pCharacterAsString, pLeft + LETTER_TEXTURE_PADDING, pTop + LETTER_TEXTURE_PADDING, this.mStrokePaint);
     }
 
     // ===========================================================

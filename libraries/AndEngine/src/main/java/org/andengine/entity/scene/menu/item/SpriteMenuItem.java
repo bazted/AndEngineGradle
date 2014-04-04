@@ -125,7 +125,7 @@ public class SpriteMenuItem extends Sprite implements IMenuItem {
 
     @Override
     public void onUnselected() {
-		/* Nothing. */
+        /* Nothing. */
     }
 
     // ===========================================================

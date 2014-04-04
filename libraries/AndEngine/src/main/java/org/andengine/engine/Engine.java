@@ -410,7 +410,7 @@ public class Engine implements SensorEventListener, OnTouchListener, ITouchEvent
         if (this.mRunning) {
             this.mTouchController.onHandleMotionEvent(pSurfaceMotionEvent);
             try {
-				/* Because a human cannot interact 1000x per second, we pause the UI-Thread for a little. */
+                /* Because a human cannot interact 1000x per second, we pause the UI-Thread for a little. */
                 Thread.sleep(this.mEngineOptions.getTouchOptions().getTouchEventIntervalMilliseconds());
             } catch (final InterruptedException e) {
                 Debug.e(e);
@@ -423,8 +423,8 @@ public class Engine implements SensorEventListener, OnTouchListener, ITouchEvent
 
     @Override
     public boolean onTouchEvent(final TouchEvent pSurfaceTouchEvent) {
-		/*
-		 * Let the engine determine which scene and camera this event should be
+        /*
+         * Let the engine determine which scene and camera this event should be
 		 * handled by.
 		 */
         final Scene scene = this.getSceneFromSurfaceTouchEvent(pSurfaceTouchEvent);

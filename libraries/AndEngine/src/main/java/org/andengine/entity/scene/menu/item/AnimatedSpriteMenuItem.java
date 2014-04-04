@@ -125,7 +125,7 @@ public class AnimatedSpriteMenuItem extends AnimatedSprite implements IMenuItem 
 
     @Override
     public void onUnselected() {
-		/* Nothing. */
+        /* Nothing. */
     }
 
     // ===========================================================

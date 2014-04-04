@@ -87,7 +87,7 @@ public class Spiral {
         this.mDirectionSegmentIndex++;
 
         if (this.mDirectionSegmentIndex == this.mDirectionSegmentLength) {
-			/* Finished current segment. */
+            /* Finished current segment. */
             this.mDirectionSegmentIndex = 0;
 
 			/* Rotate 90° to the right. */

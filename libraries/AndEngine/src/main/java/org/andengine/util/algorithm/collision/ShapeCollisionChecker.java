@@ -65,16 +65,16 @@ public class ShapeCollisionChecker extends BaseCollisionChecker {
     public static boolean checkCollision(final float[] pVerticesA, final int pVertexCountA, final int pVertexOffsetXA, final int pVertexOffsetYA, final int pVertexStrideA, final float[] pVerticesB, final int pVertexCountB, final int pVertexOffsetXB, final int pVertexOffsetYB, final int pVertexStrideB) {
         /* Check all the lines of A ... */
         for (int a = pVertexCountA - 2; a >= 0; a--) {
-			/* ... against all lines in B. */
+            /* ... against all lines in B. */
             if (ShapeCollisionChecker.checkCollisionSub(pVerticesA, pVertexOffsetXA, pVertexOffsetYA, pVertexStrideA, a, a + 1, pVerticesB, pVertexCountB, pVertexOffsetXB, pVertexOffsetYB, pVertexStrideB)) {
                 return true;
             }
         }
-		/* Also check the 'around the corner of the array' line of A against all lines in B. */
+        /* Also check the 'around the corner of the array' line of A against all lines in B. */
         if (ShapeCollisionChecker.checkCollisionSub(pVerticesA, pVertexOffsetXA, pVertexOffsetYA, pVertexStrideA, pVertexCountA - 1, 0, pVerticesB, pVertexCountB, pVertexOffsetXB, pVertexOffsetYB, pVertexStrideB)) {
             return true;
         } else {
-			/* At last check if one polygon 'contains' the other one by checking
+            /* At last check if one polygon 'contains' the other one by checking
 			 * if one vertex of the one vertices is contained by all of the other vertices. */
             if (ShapeCollisionChecker.checkContains(pVerticesA, pVertexCountA, VertexUtils.getVertex(pVerticesB, pVertexOffsetXB, pVertexStrideB, 0), VertexUtils.getVertex(pVerticesB, pVertexOffsetYB, pVertexStrideB, 0))) {
                 return true;

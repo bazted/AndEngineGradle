@@ -76,7 +76,7 @@ public class ActivityUtils {
     }
 
     public static <T> void doAsync(final Context pContext, final CharSequence pTitle, final CharSequence pMessage, final Callable<T> pCallable, final Callback<T> pCallback) {
-        ActivityUtils.doAsync(pContext, pTitle, pMessage, pCallable, pCallback, null, false);
+        doAsync(pContext, pTitle, pMessage, pCallable, pCallback, null, false);
     }
 
     public static <T> void doAsync(final Context pContext, final int pTitleResourceID, final int pMessageResourceID, final Callable<T> pCallable, final Callback<T> pCallback, final boolean pCancelable) {
@@ -84,7 +84,7 @@ public class ActivityUtils {
     }
 
     public static <T> void doAsync(final Context pContext, final CharSequence pTitle, final CharSequence pMessage, final Callable<T> pCallable, final Callback<T> pCallback, final boolean pCancelable) {
-        ActivityUtils.doAsync(pContext, pTitle, pMessage, pCallable, pCallback, null, pCancelable);
+        doAsync(pContext, pTitle, pMessage, pCallable, pCallback, null, pCancelable);
     }
 
     public static <T> void doAsync(final Context pContext, final int pTitleResourceID, final int pMessageResourceID, final Callable<T> pCallable, final Callback<T> pCallback, final Callback<Exception> pExceptionCallback) {
@@ -92,11 +92,11 @@ public class ActivityUtils {
     }
 
     public static <T> void doAsync(final Context pContext, final CharSequence pTitle, final CharSequence pMessage, final Callable<T> pCallable, final Callback<T> pCallback, final Callback<Exception> pExceptionCallback) {
-        ActivityUtils.doAsync(pContext, pTitle, pMessage, pCallable, pCallback, pExceptionCallback, false);
+        doAsync(pContext, pTitle, pMessage, pCallable, pCallback, pExceptionCallback, false);
     }
 
     public static <T> void doAsync(final Context pContext, final int pTitleResourceID, final int pMessageResourceID, final Callable<T> pCallable, final Callback<T> pCallback, final Callback<Exception> pExceptionCallback, final boolean pCancelable) {
-        ActivityUtils.doAsync(pContext, pContext.getString(pTitleResourceID), pContext.getString(pMessageResourceID), pCallable, pCallback, pExceptionCallback, pCancelable);
+        doAsync(pContext, pContext.getString(pTitleResourceID), pContext.getString(pMessageResourceID), pCallable, pCallback, pExceptionCallback, pCancelable);
     }
 
     public static <T> void doAsync(final Context pContext, final CharSequence pTitle, final CharSequence pMessage, final Callable<T> pCallable, final Callback<T> pCallback, final Callback<Exception> pExceptionCallback, final boolean pCancelable) {
@@ -245,7 +245,7 @@ public class ActivityUtils {
                     pd.dismiss();
                 } catch (final Exception e) {
                     Debug.e("Error", e);
-					/* Nothing. */
+                    /* Nothing. */
                 }
 
                 pCallback.onCallback(result);

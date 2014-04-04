@@ -1,0 +1,25 @@
+apply plugin: 'android-library'
+apply from: '../../tools-versions.gradle'
+android {
+
+    sourceSets.main {
+        jni.srcDirs = []
+    }
+
+    defaultConfig {
+        ndk {
+            moduleName "andenginephysicsbox2dextension"
+        }
+    }
+
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile project(':libraries:andEngine')
+}

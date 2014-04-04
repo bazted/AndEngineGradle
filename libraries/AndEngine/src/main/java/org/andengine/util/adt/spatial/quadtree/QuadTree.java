@@ -141,7 +141,7 @@ public abstract class QuadTree<B extends IBounds, T extends ISpatialItem<B>> imp
     @Deprecated
     public synchronized void add(final T pItem, final B pBounds) {
         if (!this.mRoot.contains(pBounds)) {
-            Debug.w("pBounds are out of the bounds of this " + this.getClass().getSimpleName() + ".");
+            Debug.w("pBounds are out of the bounds of this " + this.getClass().getSimpleName() + "");
             this.mRoot.addItemSafe(pItem);
             return;
         }
@@ -564,7 +564,7 @@ public abstract class QuadTree<B extends IBounds, T extends ISpatialItem<B>> imp
         }
 
         public <L extends List<T>> L query(final B pBounds, final IMatcher<T> pMatcher, final L pResult) {
-			/* Test against all items in this node. */
+            /* Test against all items in this node. */
             if (this.mItems != null) {
                 for (final T item : this.mItems) {
                     if (this.intersects(pBounds, item.getBounds()) && pMatcher.matches(item)) {
@@ -589,7 +589,7 @@ public abstract class QuadTree<B extends IBounds, T extends ISpatialItem<B>> imp
 
         @SuppressWarnings("unchecked")
         public <L extends List<S>, S extends T> L queryForSubclass(final B pBounds, final IMatcher<T> pMatcher, final L pResult) throws ClassCastException {
-			/* Test against all items in this node. */
+            /* Test against all items in this node. */
             if (this.mItems != null) {
                 for (final T item : this.mItems) {
                     if (this.intersects(pBounds, item.getBounds()) && pMatcher.matches(item)) {
@@ -690,7 +690,7 @@ public abstract class QuadTree<B extends IBounds, T extends ISpatialItem<B>> imp
         }
 
         public boolean containsAny(final B pBounds, final IMatcher<T> pMatcher) {
-			/* Test against all items in this node. */
+            /* Test against all items in this node. */
             if (this.mItems != null) {
                 final int itemCount = this.mItems.size();
                 for (int i = 0; i < itemCount; i++) {
@@ -844,7 +844,7 @@ public abstract class QuadTree<B extends IBounds, T extends ISpatialItem<B>> imp
 
         public boolean remove(final T pItem, final B pBounds) throws IllegalArgumentException {
             if (!this.contains(pBounds)) { // TODO Perform this check only for the root?
-                throw new IllegalArgumentException("pItem (" + pItem.toString() + ") is out of the bounds of this " + this.getClass().getSimpleName() + ".");
+                throw new IllegalArgumentException("pItem (" + pItem.toString() + ") is out of the bounds of this " + this.getClass().getSimpleName() + "");
             }
 
 			/* If there are no children, try to remove from self. */

@@ -167,7 +167,7 @@ public class TextureManager {
         }
 
         if (this.mTexturesManaged.contains(pTexture)) {
-			/* Just make sure it doesn't get deleted. */
+            /* Just make sure it doesn't get deleted. */
             this.mTexturesToBeUnloaded.remove(pTexture);
             return false;
         } else {
@@ -187,8 +187,8 @@ public class TextureManager {
         }
 
         if (this.mTexturesManaged.contains(pTexture)) {
-			/* If the Texture is loaded, unload it.
-			 * If the Texture is about to be loaded, stop it from being loaded. */
+            /* If the Texture is loaded, unload it.
+             * If the Texture is about to be loaded, stop it from being loaded. */
             if (this.mTexturesLoaded.contains(pTexture)) {
                 this.mTexturesToBeUnloaded.add(pTexture);
             } else if (this.mTexturesToBeLoaded.remove(pTexture)) {

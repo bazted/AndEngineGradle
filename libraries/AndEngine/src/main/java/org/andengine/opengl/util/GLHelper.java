@@ -67,7 +67,7 @@ public class GLHelper {
 
 				/* [A][R][G][B] to [A][B][G][R] */
                 /* From : [ A7 A6 A5 A4 A3 A2 A1 A0  |  R7 R6 R5 R4 R3 R2 R1 R0  |  G7 G6 G5 G4 G3 G2 G1 G0  |  B7 B6 B5 B4 B3 B2 B1 B0 ] */
-				/* To   : [ A7 A6 A5 A4 A3 A2 A1 A0  |  B7 B6 B5 B4 B3 B2 B1 B0  |  G7 G6 G5 G4 G3 G2 G1 G0  |  R7 R6 R5 R4 R3 R2 R1 R0 ] */
+                /* To   : [ A7 A6 A5 A4 A3 A2 A1 A0  |  B7 B6 B5 B4 B3 B2 B1 B0  |  G7 G6 G5 G4 G3 G2 G1 G0  |  R7 R6 R5 R4 R3 R2 R1 R0 ] */
                 pPixelsARGB_8888[i] = (pixel & 0xFF00FF00) | ((pixel << 16) & 0x00FF0000) | ((pixel >> 16) & 0x000000FF);
             }
         } else {
@@ -75,8 +75,8 @@ public class GLHelper {
                 final int pixel = pPixelsARGB_8888[i];
 
 				/* [A][R][G][B] to [R][G][B][A] */
-				/* From : [ A7 A6 A5 A4 A3 A2 A1 A0  |  R7 R6 R5 R4 R3 R2 R1 R0  |  G7 G6 G5 G4 G3 G2 G1 G0  |  B7 B6 B5 B4 B3 B2 B1 B0 ] */
-				/* To   : [ R7 R6 R5 R4 R3 R2 R1 R0  |  G7 G6 G5 G4 G3 G2 G1 G0  |  B7 B6 B5 B4 B3 B2 B1 B0  |  A7 A6 A5 A4 A3 A2 A1 A0 ] */
+                /* From : [ A7 A6 A5 A4 A3 A2 A1 A0  |  R7 R6 R5 R4 R3 R2 R1 R0  |  G7 G6 G5 G4 G3 G2 G1 G0  |  B7 B6 B5 B4 B3 B2 B1 B0 ] */
+                /* To   : [ R7 R6 R5 R4 R3 R2 R1 R0  |  G7 G6 G5 G4 G3 G2 G1 G0  |  B7 B6 B5 B4 B3 B2 B1 B0  |  A7 A6 A5 A4 A3 A2 A1 A0 ] */
                 pPixelsARGB_8888[i] = ((pixel << 8) & 0xFFFFFF00) | ((pixel >> 24) & 0x000000FF);
             }
         }

@@ -439,7 +439,7 @@ public abstract class BaseGameActivity extends BaseActivity implements IGameInte
                 if (SystemUtils.SDK_VERSION_GINGERBREAD_OR_LATER) {
                     this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
                 } else {
-                    Debug.w(ScreenOrientation.class.getSimpleName() + "." + ScreenOrientation.LANDSCAPE_SENSOR + " is not supported on this device. Falling back to " + ScreenOrientation.class.getSimpleName() + "." + ScreenOrientation.LANDSCAPE_FIXED);
+                    Debug.w(ScreenOrientation.class.getSimpleName() + "" + ScreenOrientation.LANDSCAPE_SENSOR + " is not supported on this device. Falling back to " + ScreenOrientation.class.getSimpleName() + "." + ScreenOrientation.LANDSCAPE_FIXED);
                     this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
                 }
                 break;
@@ -450,7 +450,7 @@ public abstract class BaseGameActivity extends BaseActivity implements IGameInte
                 if (SystemUtils.SDK_VERSION_GINGERBREAD_OR_LATER) {
                     this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT);
                 } else {
-                    Debug.w(ScreenOrientation.class.getSimpleName() + "." + ScreenOrientation.PORTRAIT_SENSOR + " is not supported on this device. Falling back to " + ScreenOrientation.class.getSimpleName() + "." + ScreenOrientation.PORTRAIT_FIXED);
+                    Debug.w(ScreenOrientation.class.getSimpleName() + "" + ScreenOrientation.PORTRAIT_SENSOR + " is not supported on this device. Falling back to " + ScreenOrientation.class.getSimpleName() + "." + ScreenOrientation.PORTRAIT_FIXED);
                     this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                 }
                 break;

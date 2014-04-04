@@ -63,7 +63,7 @@ public abstract class PictureBitmapTextureAtlasSource extends BaseTextureAtlasSo
     public Bitmap onLoadBitmap(final Config pBitmapConfig) {
         final Picture picture = this.mPicture;
         if (picture == null) {
-            Debug.e("Failed loading Bitmap in " + this.getClass().getSimpleName() + ".");
+            Debug.e("Failed loading Bitmap in " + this.getClass().getSimpleName() + "");
             return null;
         }
 

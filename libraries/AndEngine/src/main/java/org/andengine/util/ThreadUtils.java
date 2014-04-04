@@ -45,7 +45,7 @@ public class ThreadUtils {
     }
 
     private static void dumpCurrentThreadInfo(final DebugLevel pDebugLevel, final StackTraceElement pCaller) {
-        Debug.log(pDebugLevel, pCaller.getClassName() + "." + pCaller.getMethodName() + "(" + pCaller.getFileName() + ".java:" + pCaller.getLineNumber() + ") @(Thread: '" + Thread.currentThread().getName() + "')");
+        Debug.log(pDebugLevel, pCaller.getClassName() + "" + pCaller.getMethodName() + "(" + pCaller.getFileName() + ".java:" + pCaller.getLineNumber() + ") @(Thread: '" + Thread.currentThread().getName() + "')");
     }
 
     // ===========================================================

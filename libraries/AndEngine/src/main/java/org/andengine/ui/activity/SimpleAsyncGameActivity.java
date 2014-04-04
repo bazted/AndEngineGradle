@@ -84,7 +84,7 @@ public abstract class SimpleAsyncGameActivity extends BaseGameActivity {
                 }, new Callback<Void>() {
                     @Override
                     public void onCallback(final Void pCallbackValue) {
-						/* Nothing. */
+                        /* Nothing. */
                     }
                 });
             }
@@ -110,7 +110,7 @@ public abstract class SimpleAsyncGameActivity extends BaseGameActivity {
                 }, new Callback<Void>() {
                     @Override
                     public void onCallback(final Void pCallbackValue) {
-						/* Nothing. */
+                        /* Nothing. */
                     }
                 });
             }

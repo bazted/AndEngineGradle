@@ -68,7 +68,7 @@ public class ScreenGrabber extends Entity {
 
     @Override
     public void reset() {
-		/* Nothing */
+        /* Nothing */
     }
 
     // ===========================================================

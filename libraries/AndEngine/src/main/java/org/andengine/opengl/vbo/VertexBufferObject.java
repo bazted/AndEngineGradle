@@ -35,7 +35,7 @@ public abstract class VertexBufferObject implements IVertexBufferObject {
     protected final int mUsage;
     protected final ByteBuffer mByteBuffer;
 
-    protected int mHardwareBufferID = IVertexBufferObject.HARDWARE_BUFFER_ID_INVALID;
+    protected int mHardwareBufferID = HARDWARE_BUFFER_ID_INVALID;
     protected boolean mDirtyOnHardware = true;
 
     protected boolean mDisposed;
@@ -92,12 +92,12 @@ public abstract class VertexBufferObject implements IVertexBufferObject {
 
     @Override
     public boolean isLoadedToHardware() {
-        return this.mHardwareBufferID != IVertexBufferObject.HARDWARE_BUFFER_ID_INVALID;
+        return this.mHardwareBufferID != HARDWARE_BUFFER_ID_INVALID;
     }
 
     @Override
     public void setNotLoadedToHardware() {
-        this.mHardwareBufferID = IVertexBufferObject.HARDWARE_BUFFER_ID_INVALID;
+        this.mHardwareBufferID = HARDWARE_BUFFER_ID_INVALID;
         this.mDirtyOnHardware = true;
     }
 
@@ -138,7 +138,7 @@ public abstract class VertexBufferObject implements IVertexBufferObject {
 
     @Override
     public void bind(final GLState pGLState) {
-        if (this.mHardwareBufferID == IVertexBufferObject.HARDWARE_BUFFER_ID_INVALID) {
+        if (this.mHardwareBufferID == HARDWARE_BUFFER_ID_INVALID) {
             this.loadToHardware(pGLState);
 
             if (this.mVertexBufferObjectManager != null) {
@@ -174,7 +174,7 @@ public abstract class VertexBufferObject implements IVertexBufferObject {
     public void unloadFromHardware(final GLState pGLState) {
         pGLState.deleteArrayBuffer(this.mHardwareBufferID);
 
-        this.mHardwareBufferID = IVertexBufferObject.HARDWARE_BUFFER_ID_INVALID;
+        this.mHardwareBufferID = HARDWARE_BUFFER_ID_INVALID;
     }
 
     @Override

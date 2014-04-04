@@ -79,7 +79,7 @@ public class FontFactory {
     }
 
     public static Font create(final FontManager pFontManager, final ITexture pTexture, final float pSize, final boolean pAntiAlias, final int pColor) {
-        return FontFactory.create(pFontManager, pTexture, Typeface.create(Typeface.DEFAULT, Typeface.NORMAL), pSize, pAntiAlias, pColor);
+        return create(pFontManager, pTexture, Typeface.create(Typeface.DEFAULT, Typeface.NORMAL), pSize, pAntiAlias, pColor);
     }
 
     public static Font create(final FontManager pFontManager, final TextureManager pTextureManager, final int pTextureWidth, final int pTextureHeight, final float pSize, final boolean pAntiAlias, final int pColor) {
@@ -87,7 +87,7 @@ public class FontFactory {
     }
 
     public static Font create(final FontManager pFontManager, final TextureManager pTextureManager, final int pTextureWidth, final int pTextureHeight, final TextureOptions pTextureOptions, final float pSize, final boolean pAntiAlias, final int pColor) {
-        return FontFactory.create(pFontManager, pTextureManager, pTextureWidth, pTextureHeight, pTextureOptions, Typeface.create(Typeface.DEFAULT, Typeface.NORMAL), pSize, pAntiAlias, pColor);
+        return create(pFontManager, pTextureManager, pTextureWidth, pTextureHeight, pTextureOptions, Typeface.create(Typeface.DEFAULT, Typeface.NORMAL), pSize, pAntiAlias, pColor);
     }
 
     public static Font create(final FontManager pFontManager, final TextureManager pTextureManager, final int pTextureWidth, final int pTextureHeight, final Typeface pTypeface, final float pSize) {

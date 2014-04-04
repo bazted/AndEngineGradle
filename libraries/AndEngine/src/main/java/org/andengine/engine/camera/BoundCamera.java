@@ -137,15 +137,15 @@ public class BoundCamera extends Camera {
                 /* Min and max X exceeded. */
                 return pX - maxXBoundExceededAmount + minXBoundExceededAmount;
             } else {
-				/* Only min X exceeded. */
+                /* Only min X exceeded. */
                 return pX + minXBoundExceededAmount;
             }
         } else {
             if (maxXBoundExceeded) {
-				/* Only max X exceeded. */
+                /* Only max X exceeded. */
                 return pX - maxXBoundExceededAmount;
             } else {
-				/* Nothing exceeded. */
+                /* Nothing exceeded. */
                 return pX;
             }
         }

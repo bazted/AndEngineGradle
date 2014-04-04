@@ -74,7 +74,8 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
             actionBar.addTab(
                     actionBar.newTab()
                             .setText(mSectionsPagerAdapter.getPageTitle(i))
-                            .setTabListener(this));
+                            .setTabListener(this)
+            );
         }
 
 

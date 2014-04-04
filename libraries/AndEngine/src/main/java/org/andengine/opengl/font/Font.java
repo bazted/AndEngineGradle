@@ -278,7 +278,7 @@ public class Font implements IFont {
                         }
 
                         if (!useDefaultAlignment) {
-							/* Restore default unpack alignment. */
+                            /* Restore default unpack alignment. */
                             GLES20.glPixelStorei(GLES20.GL_UNPACK_ALIGNMENT, GLState.GL_UNPACK_ALIGNMENT_DEFAULT);
                         }
 

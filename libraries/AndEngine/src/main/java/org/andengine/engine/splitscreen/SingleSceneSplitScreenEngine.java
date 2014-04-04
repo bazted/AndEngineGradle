@@ -77,7 +77,7 @@ public class SingleSceneSplitScreenEngine extends Engine {
                 super.mScene.onDraw(pGLState, pFirstCamera);
                 pFirstCamera.onDrawHUD(pGLState);
             }
-	
+
 			/* Second Screen. With second camera, on the right half of the screens width. */
             {
                 GLES20.glScissor(surfaceWidthHalf, 0, surfaceWidthHalf, surfaceHeight);

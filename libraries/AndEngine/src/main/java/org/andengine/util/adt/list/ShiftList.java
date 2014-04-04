@@ -128,10 +128,10 @@ public class ShiftList<T> implements IQueue<T> {
         final int size = this.mTail - this.mHead;
         /* Check which side to shift to is more efficient. */
         if (pIndex < (size >> 1)) {
-			/* Shift left. */
+            /* Shift left. */
             this.enterShiftingLeft(pIndex, pItem);
         } else {
-			/* Shift right. */
+            /* Shift right. */
             this.enterShiftingRight(pIndex, pItem, size);
         }
     }
@@ -142,7 +142,7 @@ public class ShiftList<T> implements IQueue<T> {
 		/* Check if items need to be copied. */
         final int shiftAmount = size - pIndex;
         if (shiftAmount == 0) {
-			/* Nothing to shift, we can insert at the tail. */
+            /* Nothing to shift, we can insert at the tail. */
             this.mItems[this.mTail] = pItem;
         } else {
 			/* Shift all items to the right of pIndex one to the right, so there is a free spot at pIndex. */

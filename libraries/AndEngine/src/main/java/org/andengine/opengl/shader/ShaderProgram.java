@@ -257,7 +257,7 @@ public class ShaderProgram {
             int location = GLES20.glGetAttribLocation(this.mProgramID, name);
 
             if (location == ShaderProgramConstants.LOCATION_INVALID) {
-				/* Some drivers do not report an incorrect length. Then the name is '\0' terminated. */
+                /* Some drivers do not report an incorrect length. Then the name is '\0' terminated. */
                 length = 0;
                 while (length < ShaderProgram.NAME_CONTAINER_SIZE && ShaderProgram.NAME_CONTAINER[length] != '\0') {
                     length++;

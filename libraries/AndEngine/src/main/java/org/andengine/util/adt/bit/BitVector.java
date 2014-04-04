@@ -141,7 +141,7 @@ public final class BitVector {
     }
 
     public long getBits(final int pPosition, final int pLength) {
-		/* Sanity checks. */
+        /* Sanity checks. */
         if (pPosition < 0) {
             throw new IllegalArgumentException("pPosition must be >= 0.");
         }
@@ -166,7 +166,7 @@ public final class BitVector {
         } else if (offset + pLength <= DataConstants.BITS_PER_LONG) {
             data = this.mData[dataIndex] << offset;
         } else {
-			/* Join bits from adjacent data fields. */
+            /* Join bits from adjacent data fields. */
             data = (this.mData[dataIndex] << offset) | (this.mData[dataIndex + 1] >>> (DataConstants.BITS_PER_LONG - offset));
         }
 
@@ -211,7 +211,7 @@ public final class BitVector {
         }
 
         final byte[] bytes = new byte[byteArrayLength];
-		/* Check if bytes perfectly fit into the data fields or if there are some overflow bytes that need special treatment. */
+        /* Check if bytes perfectly fit into the data fields or if there are some overflow bytes that need special treatment. */
         final boolean perfectDataFit = this.mCapacity % DataConstants.BITS_PER_LONG == 0;
 
         final long[] data = this.mData;

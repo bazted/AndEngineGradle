@@ -187,12 +187,12 @@ public class FontUtils {
 
                 final boolean isEndReached = (i == (textLength - 1));
                 if (isEndReached) {
-					/* When the end of the string is reached, add remainder to result. */
+                    /* When the end of the string is reached, add remainder to result. */
                     if (lookaheadLineWidth <= pAutoWrapWidth) {
                         pResult.add(pText.subSequence(lineStart, lastNonWhitespace));
                     } else {
                         pResult.add(pText.subSequence(lineStart, lineEnd));
-						/* Avoid special case where last line is added twice. */
+                        /* Avoid special case where last line is added twice. */
                         if (lineStart != i) {
                             pResult.add(pText.subSequence(i, lastNonWhitespace));
                         }
@@ -230,7 +230,7 @@ public class FontUtils {
         int i = 0;
         while (i < textLength) {
             int spacesSkipped = 0;
-			/* Find next word. */
+            /* Find next word. */
             { /* Skip whitespaces. */
                 while ((i < textLength) && (pText.charAt(i) == ' ')) {
                     i++;

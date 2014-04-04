@@ -1279,7 +1279,7 @@ public class Entity implements IEntity {
     }
 
     protected void onApplyTransformations(final GLState pGLState) {
-		/* Translation. */
+        /* Translation. */
         this.applyTranslation(pGLState);
 
 		/* Rotation. */
@@ -1308,7 +1308,7 @@ public class Entity implements IEntity {
             pGLState.translateModelViewGLMatrixf(-rotationCenterX, -rotationCenterY, 0);
 
 			/* TODO There is a special, but very likely case when mRotationCenter and mScaleCenter are the same.
-			 * In that case the last glTranslatef of the rotation and the first glTranslatef of the scale is superfluous.
+             * In that case the last glTranslatef of the rotation and the first glTranslatef of the scale is superfluous.
 			 * The problem is that applyRotation and applyScale would need to be "merged" in order to efficiently check for that condition.  */
         }
     }
@@ -1348,7 +1348,7 @@ public class Entity implements IEntity {
 
             final SmartList<IEntity> children = this.mChildren;
             if ((children == null) || !this.mChildrenVisible) {
-				/* Draw only self. */
+                /* Draw only self. */
                 this.preDraw(pGLState, pCamera);
                 this.draw(pGLState, pCamera);
                 this.postDraw(pGLState, pCamera);

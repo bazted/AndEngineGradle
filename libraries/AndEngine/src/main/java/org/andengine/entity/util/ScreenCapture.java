@@ -59,7 +59,7 @@ public class ScreenCapture extends Entity implements IScreenGrabberCallback {
 
     @Override
     public void reset() {
-		/* Nothing */
+        /* Nothing */
     }
 
     @Override

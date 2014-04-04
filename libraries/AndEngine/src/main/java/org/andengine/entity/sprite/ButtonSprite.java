@@ -74,9 +74,9 @@ public class ButtonSprite extends TiledSprite {
 
         switch (this.mStateCount) {
             case 1:
-                Debug.w("No " + ITextureRegion.class.getSimpleName() + " supplied for " + State.class.getSimpleName() + "." + State.PRESSED + ".");
+                Debug.w("No " + ITextureRegion.class.getSimpleName() + " supplied for " + State.class.getSimpleName() + "" + State.PRESSED + ".");
             case 2:
-                Debug.w("No " + ITextureRegion.class.getSimpleName() + " supplied for " + State.class.getSimpleName() + "." + State.DISABLED + ".");
+                Debug.w("No " + ITextureRegion.class.getSimpleName() + " supplied for " + State.class.getSimpleName() + "" + State.DISABLED + ".");
                 break;
             case 3:
                 break;
@@ -163,7 +163,7 @@ public class ButtonSprite extends TiledSprite {
         final int stateTiledTextureRegionIndex = this.mState.getTiledTextureRegionIndex();
         if (stateTiledTextureRegionIndex >= this.mStateCount) {
             this.setCurrentTileIndex(0);
-            Debug.w(this.getClass().getSimpleName() + " changed its " + State.class.getSimpleName() + " to " + pState.toString() + ", which doesn't have a " + ITextureRegion.class.getSimpleName() + " supplied. Applying default " + ITextureRegion.class.getSimpleName() + ".");
+            Debug.w(this.getClass().getSimpleName() + " changed its " + State.class.getSimpleName() + " to " + pState.toString() + ", which doesn't have a " + ITextureRegion.class.getSimpleName() + " supplied. Applying default " + ITextureRegion.class.getSimpleName() + "");
         } else {
             this.setCurrentTileIndex(stateTiledTextureRegionIndex);
         }

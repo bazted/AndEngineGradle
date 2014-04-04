@@ -41,7 +41,7 @@ public abstract class ZeroMemoryVertexBufferObject implements IVertexBufferObjec
     protected final boolean mAutoDispose;
     protected final int mUsage;
 
-    protected int mHardwareBufferID = IVertexBufferObject.HARDWARE_BUFFER_ID_INVALID;
+    protected int mHardwareBufferID = HARDWARE_BUFFER_ID_INVALID;
     protected boolean mDirtyOnHardware = true;
 
     protected boolean mDisposed;
@@ -87,12 +87,12 @@ public abstract class ZeroMemoryVertexBufferObject implements IVertexBufferObjec
 
     @Override
     public boolean isLoadedToHardware() {
-        return this.mHardwareBufferID != IVertexBufferObject.HARDWARE_BUFFER_ID_INVALID;
+        return this.mHardwareBufferID != HARDWARE_BUFFER_ID_INVALID;
     }
 
     @Override
     public void setNotLoadedToHardware() {
-        this.mHardwareBufferID = IVertexBufferObject.HARDWARE_BUFFER_ID_INVALID;
+        this.mHardwareBufferID = HARDWARE_BUFFER_ID_INVALID;
         this.mDirtyOnHardware = true;
     }
 
@@ -143,7 +143,7 @@ public abstract class ZeroMemoryVertexBufferObject implements IVertexBufferObjec
 
     @Override
     public void bind(final GLState pGLState) {
-        if (this.mHardwareBufferID == IVertexBufferObject.HARDWARE_BUFFER_ID_INVALID) {
+        if (this.mHardwareBufferID == HARDWARE_BUFFER_ID_INVALID) {
             this.loadToHardware(pGLState);
             this.mVertexBufferObjectManager.onVertexBufferObjectLoaded(this);
         }
@@ -186,7 +186,7 @@ public abstract class ZeroMemoryVertexBufferObject implements IVertexBufferObjec
     public void unloadFromHardware(final GLState pGLState) {
         pGLState.deleteArrayBuffer(this.mHardwareBufferID);
 
-        this.mHardwareBufferID = IVertexBufferObject.HARDWARE_BUFFER_ID_INVALID;
+        this.mHardwareBufferID = HARDWARE_BUFFER_ID_INVALID;
     }
 
     @Override

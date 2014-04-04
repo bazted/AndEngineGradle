@@ -33,7 +33,7 @@ public class OerstedFragment extends Fragment implements CompoundButton.OnChecke
 
     @Click
     void coords_tv() {
-        AndActivity_.intent(getActivity()).start();
+        MeshActivity_.intent(getActivity()).start();
     }
 
 

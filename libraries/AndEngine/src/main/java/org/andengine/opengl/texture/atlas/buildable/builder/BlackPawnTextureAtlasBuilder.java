@@ -320,7 +320,7 @@ public class BlackPawnTextureAtlasBuilder<T extends ITextureAtlasSource, A exten
                         rect.getHeight()
                 );
             } else {
-				/* Split using a horizontal axis. */
+                /* Split using a horizontal axis. */
                 this.mChildA = new Node(
                         rect.getLeft(),
                         rect.getTop(),

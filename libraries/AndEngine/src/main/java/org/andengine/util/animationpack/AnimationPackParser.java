@@ -108,7 +108,7 @@ public class AnimationPackParser extends DefaultHandler {
             this.mTexturePackLibrary.put(texturePackName, texturePack);
             texturePack.loadTexture();
         } else if (pLocalName.equals(AnimationPackParser.TAG_ANIMATIONS)) {
-			/* Nothing. */
+            /* Nothing. */
         } else if (pLocalName.equals(AnimationPackParser.TAG_ANIMATION)) {
             this.mCurrentAnimationName = SAXUtils.getAttributeOrThrow(pAttributes, AnimationPackParser.TAG_ANIMATION_ATTRIBUTE_NAME);
             this.mCurrentAnimationLoopCount = SAXUtils.getIntAttribute(pAttributes, AnimationPackParser.TAG_ANIMATION_ATTRIBUTE_LOOPCOUNT, IAnimationData.LOOP_CONTINUOUS);
@@ -127,9 +127,9 @@ public class AnimationPackParser extends DefaultHandler {
     @Override
     public void endElement(final String pUri, final String pLocalName, final String pQualifiedName) throws SAXException {
         if (pLocalName.equals(AnimationPackParser.TAG_ANIMATIONPACK)) {
-			/* Nothing. */
+            /* Nothing. */
         } else if (pLocalName.equals(AnimationPackParser.TAG_TEXTUREPACKS)) {
-			/* Nothing. */
+            /* Nothing. */
         } else if (pLocalName.equals(AnimationPackParser.TAG_TEXTUREPACK)) {
 			/* Nothing. */
         } else if (pLocalName.equals(AnimationPackParser.TAG_ANIMATIONS)) {

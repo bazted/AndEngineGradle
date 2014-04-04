@@ -21,7 +21,9 @@ dependencies {
     apt 'org.androidannotations:androidannotations:3.0.1'
     compile 'org.androidannotations:androidannotations-api:3.0.1'
     compile 'com.github.japgolly.android:svg-android:2.0.5'
-    compile project(':libraries:AndEngine')
+    compile project(':libraries:andEngine')
+    compile project(':libraries:andEnginePhysicsBox2DExtension')
+    compile project(':libraries:andEngineSVGTextureRegionExtension')
     //or https://code.google.com/p/androidsvg/
 //    compile 'com.caverock:androidsvg:1.2.1'
     // compile fileTree(dir: 'libs', include: ['*.jar'])

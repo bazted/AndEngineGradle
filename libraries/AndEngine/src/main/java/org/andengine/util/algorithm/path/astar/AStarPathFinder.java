@@ -109,7 +109,7 @@ public class AStarPathFinder<T> implements IPathFinder<T> {
 
                     Node neighborNode = openNodes.get(neighborNodeID);
                     final boolean neighborNodeIsNew;
-					/* Check if neighbor exists. */
+                    /* Check if neighbor exists. */
                     if (neighborNode == null) {
                         neighborNodeIsNew = true;
                         neighborNode = new Node(neighborNodeX, neighborNodeY, pAStarHeuristic.getExpectedRestCost(pPathFinderMap, pEntity, neighborNodeX, neighborNodeY, pToX, pToY));
@@ -121,7 +121,7 @@ public class AStarPathFinder<T> implements IPathFinder<T> {
                     final float costFromCurrentToNeigbor = pCostFunction.getCost(pPathFinderMap, currentNode.mX, currentNode.mY, neighborNodeX, neighborNodeY, pEntity);
                     final float neighborNodeCost = currentNode.mCost + costFromCurrentToNeigbor;
                     if (neighborNodeCost > pMaxCost) {
-						/* Too expensive -> remove if isn't a new node. */
+                        /* Too expensive -> remove if isn't a new node. */
                         if (!neighborNodeIsNew) {
                             openNodes.remove(neighborNodeID);
                         }
@@ -130,7 +130,7 @@ public class AStarPathFinder<T> implements IPathFinder<T> {
                         if (neighborNodeIsNew) {
                             openNodes.put(neighborNodeID, neighborNode);
                         } else {
-							/* Remove so that re-insertion puts it to the correct spot. */
+                            /* Remove so that re-insertion puts it to the correct spot. */
                             sortedOpenNodes.remove(neighborNode);
                         }
 

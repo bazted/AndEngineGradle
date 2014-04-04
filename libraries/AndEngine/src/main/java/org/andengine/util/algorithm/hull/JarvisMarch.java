@@ -65,7 +65,7 @@ public class JarvisMarch implements IHullAlgorithm {
             hullVertexCount++;
 
 			/* Compute the angle between the current hull vertex and all remaining vertices.
-			 * Pick the smallest angle larger then the current angle. */
+             * Pick the smallest angle larger then the current angle. */
             int nextHullVertexIndex = 0;
             float nextHullVertexAngle = MathConstants.PI_TWICE; /* 360 degrees. */
 

@@ -217,9 +217,9 @@ public class CircularList<T> implements IList<T> {
             Arrays.fill(this.mItems, this.mHead, tail, null);
         } else {
             final int headToCapacity = capacity - this.mHead;
-			/* Black out items from head to the end of the array. */
+            /* Black out items from head to the end of the array. */
             Arrays.fill(this.mItems, this.mHead, capacity, null);
-			/* Black out items from the beginning of the array to the tail. */
+            /* Black out items from the beginning of the array to the tail. */
             Arrays.fill(this.mItems, 0, this.mSize - headToCapacity, null);
         }
         this.mHead = 0;

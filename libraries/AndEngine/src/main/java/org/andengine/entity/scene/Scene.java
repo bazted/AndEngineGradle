@@ -313,8 +313,8 @@ public class Scene extends Entity {
             if (this.mTouchAreaBindingOnActionDownEnabled) {
                 final SparseArray<ITouchArea> touchAreaBindings = this.mTouchAreaBindings;
                 final ITouchArea boundTouchArea = touchAreaBindings.get(pSceneTouchEvent.getPointerID());
-				/* In the case a ITouchArea has been bound to this PointerID,
-				 * we'll pass this this TouchEvent to the same ITouchArea. */
+                /* In the case a ITouchArea has been bound to this PointerID,
+                 * we'll pass this this TouchEvent to the same ITouchArea. */
                 if (boundTouchArea != null) {
                     final float sceneTouchEventX = pSceneTouchEvent.getX();
                     final float sceneTouchEventY = pSceneTouchEvent.getY();
@@ -356,7 +356,7 @@ public class Scene extends Entity {
                         if (touchArea.contains(sceneTouchEventX, sceneTouchEventY)) {
                             final Boolean handled = this.onAreaTouchEvent(pSceneTouchEvent, sceneTouchEventX, sceneTouchEventY, touchArea);
                             if (handled != null && handled) {
-								/* If binding of ITouchAreas is enabled and this is an ACTION_DOWN event,
+                                /* If binding of ITouchAreas is enabled and this is an ACTION_DOWN event,
 								 *  bind this ITouchArea to the PointerID. */
                                 if ((this.mTouchAreaBindingOnActionDownEnabled && isActionDown) || (this.mTouchAreaBindingOnActionMoveEnabled && isActionMove)) {
                                     this.mTouchAreaBindings.put(pSceneTouchEvent.getPointerID(), touchArea);

@@ -174,13 +174,13 @@ public class SortedList<T extends Comparable<T>> implements ISortedList<T> {
         while (i < pEnd) {
             final T item = this.mList.get(i);
             if (i <= pGuess) {
-				/* Since the compartTo check has already been performed, only equals needs to be checked. */
+                /* Since the compartTo check has already been performed, only equals needs to be checked. */
                 if (pItem.equals(item)) {
-					/* Item found. */
+                    /* Item found. */
                     return i;
                 }
             } else {
-				/* Check if the sequence is still ongoing. */
+                /* Check if the sequence is still ongoing. */
                 if (pItem.compareTo(item) == 0) {
                     if (pItem.equals(item)) {
 						/* Item found. */
