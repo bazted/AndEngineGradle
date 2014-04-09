@@ -12,8 +12,9 @@
             android:label="@string/app_name" />
 
         <activity android:name="com.bazted.wsiz.physics.MainListActivity_" />
+        <activity android:name="com.bazted.wsiz.physics.ParticleActivity_" />
         <activity
-            android:name=".ParticleActivity_"
+            android:name=".SVGActivity_"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -82,11 +82,8 @@ public class ParticleActivity extends SimpleBaseGameActivity {
         final PointParticleEmitter particleEmitter = new
                 PointParticleEmitter(CAMERA_WIDTH * 0.5f, CAMERA_HEIGHT * 0.5f);
 
-//        final SpriteParticleSystem particleSystem = new SpriteParticleSystem(particleEmitter, 60, 60, 360,
-//                this.mParticleTextureRegion, this.getVertexBufferObjectManager());
-        final SpriteParticleSystem particleSystem = new SpriteParticleSystem(
-                particleEmitter, 60, 60, 360, this.mParticleTextureRegion, this.getVertexBufferObjectManager()
-        );
+        final SpriteParticleSystem particleSystem = new SpriteParticleSystem(particleEmitter, 60, 60, 360,
+                this.mParticleTextureRegion, this.getVertexBufferObjectManager());
 
         scene.setOnSceneTouchListener(new IOnSceneTouchListener() {
             @Override
