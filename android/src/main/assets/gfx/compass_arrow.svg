@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg"
+    height="155.22" width="155.19" version="1.1" xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <defs>
+        <radialGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" cy="308.08" cx="382.62"
+            gradientTransform="matrix(0.9464,0,0,0.9564,19.9077,-1.2446)" r="8.3018">
+            <stop stop-color="#FFF" offset="0" />
+            <stop stop-color="#231F20" offset="1" />
+        </radialGradient>
+    </defs>
+    <metadata>
+        <rdf:RDF>
+            <cc:Work rdf:about="">
+                <dc:format>image/svg+xml</dc:format>
+                <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+                <dc:title />
+            </cc:Work>
+        </rdf:RDF>
+    </metadata>
+    <g transform="translate(-297.40625,-454.75343)">
+        <g fill-rule="evenodd" transform="translate(-7,238.97218)" stroke="#231f20"
+            stroke-miterlimit="22.92560005" clip-rule="evenodd" stroke-width="0.21600001">
+            <polygon points="389.5,293.39,374.5,293.39,382,243.39" fill="#ec1c24" />
+            <polygon points="389.5,293.39,374.5,293.39,382,343.39" fill="#0094d9" />
+            <polygon
+                points="385.96,297.36,386.65,296.54,387.12,295.54,387.47,294.48,387.58,293.42,387.47,292.3,387.12,291.24,386.65,290.3,385.96,289.42,385.08,288.72,384.15,288.19,383.1,287.9,382,287.78,380.89,287.9,379.85,288.19,378.92,288.72,378.04,289.42,377.4,290.3,376.88,291.24,376.53,292.3,376.42,293.42,376.53,294.48,376.88,295.54,377.4,296.54,378.04,297.36,378.92,298.06,379.85,298.59,380.89,298.95,382,299,383.1,298.95,384.15,298.59,385.08,298.06"
+                fill="url(#SVGID_1_)" />
+        </g>
+    </g>
+</svg>
