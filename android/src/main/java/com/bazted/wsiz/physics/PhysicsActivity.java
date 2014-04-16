@@ -6,8 +6,12 @@ import org.andengine.engine.camera.Camera;
 import org.andengine.engine.options.EngineOptions;
 import org.andengine.engine.options.ScreenOrientation;
 import org.andengine.engine.options.resolutionpolicy.RatioResolutionPolicy;
+import org.andengine.entity.modifier.RotationModifier;
+import org.andengine.entity.scene.IOnAreaTouchListener;
+import org.andengine.entity.scene.ITouchArea;
 import org.andengine.entity.scene.Scene;
 import org.andengine.entity.scene.background.Background;
+import org.andengine.entity.sprite.ButtonSprite;
 import org.andengine.entity.sprite.Sprite;
 import org.andengine.entity.util.FPSLogger;
 import org.andengine.extension.svg.opengl.texture.atlas.bitmap.SVGBitmapTextureAtlasTextureRegionFactory;
@@ -27,7 +31,7 @@ import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.UiThread;
 
 @EActivity
-public class PhysicsActivity extends SimpleBaseGameActivity {
+public class PhysicsActivity extends SimpleBaseGameActivity implements IOnAreaTouchListener {
 
 
     private static final int CAMERA_WIDTH = 480;
@@ -38,6 +42,7 @@ public class PhysicsActivity extends SimpleBaseGameActivity {
     private ITextureRegion switcher;
     private ITextureRegion compass;
     private ITextureRegion turn_on_btn;
+    private ITextureRegion turn_off_btn;
 
     @Override
     public EngineOptions onCreateEngineOptions() {
@@ -58,6 +63,7 @@ public class PhysicsActivity extends SimpleBaseGameActivity {
         this.switcher = SVGBitmapTextureAtlasTextureRegionFactory.createFromAsset(bitmapTextureAtlas, this, "switcher.svg", 74, 74);
         this.compass = SVGBitmapTextureAtlasTextureRegionFactory.createFromAsset(bitmapTextureAtlas, this, "compass.svg", 155, 155);
         this.turn_on_btn = SVGBitmapTextureAtlasTextureRegionFactory.createFromAsset(bitmapTextureAtlas, this, "turn_on_btn.svg", 114, 38);
+        this.turn_off_btn = SVGBitmapTextureAtlasTextureRegionFactory.createFromAsset(bitmapTextureAtlas, this, "turn_off_btn.svg", 114, 38);
 
         try {
             bitmapTextureAtlas.build(new BlackPawnTextureAtlasBuilder<IBitmapTextureAtlasSource, BitmapTextureAtlas>(0, 1, 0));
@@ -83,26 +89,44 @@ public class PhysicsActivity extends SimpleBaseGameActivity {
 
         final Sprite compassArrow = new Sprite(0, 0, 155, 155, this.arrowSvg, vertexBufferObjectManager);
         compassEntity.attachChild(compassArrow);
+        compassArrow.setRotationCenter(77.5f, 77.5f);
+
 
         final Sprite switcher = new Sprite(49, 577, 74, 74, this.switcher, vertexBufferObjectManager) {
             @Override
-            public boolean onAreaTouched(final TouchEvent pSceneTouchEvent, final float pTouchAreaLocalX, final float pTouchAreaLocalY) {
-                showToast("Switcher clicked");
-                return true;
+            public boolean onAreaTouched(TouchEvent pSceneTouchEvent, float pTouchAreaLocalX, float pTouchAreaLocalY) {
+                if (pSceneTouchEvent.getAction() == TouchEvent.ACTION_DOWN) {
+                    showToast("switcher onAreaTouched");
+                    Debug.e("onAreaTouched switcher");
+                }
+                return super.onAreaTouched(pSceneTouchEvent, pTouchAreaLocalX, pTouchAreaLocalY);
             }
         };
+
         backEntity.attachChild(switcher);
 
-        final Sprite turn_on_btn = new Sprite(218, 742, 114, 38, this.turn_on_btn, vertexBufferObjectManager) {
+//        final Sprite turn_on_btn = new Sprite(218, 742, 114, 38, this.turn_on_btn, vertexBufferObjectManager) {
+//            @Override
+//            public boolean onAreaTouched(final TouchEvent pSceneTouchEvent, final float pTouchAreaLocalX, final float pTouchAreaLocalY) {
+//                showToast("turn_on_btn clicked");
+//                Debug.e("Touched area turn_on_btn");
+//                return true;
+//            }
+//        };
+        final ButtonSprite turn_on_btn = new ButtonSprite(218, 742, this.turn_on_btn, this.turn_off_btn, vertexBufferObjectManager, new ButtonSprite.OnClickListener() {
             @Override
-            public boolean onAreaTouched(final TouchEvent pSceneTouchEvent, final float pTouchAreaLocalX, final float pTouchAreaLocalY) {
-                showToast("turn_on_btn clicked");
-
-                return true;
+            public void onClick(ButtonSprite pButtonSprite, float pTouchAreaLocalX, float pTouchAreaLocalY) {
+                compassArrow.registerEntityModifier(new RotationModifier(5, 0, 45));
+                showToast("turn_on_btn on clicked");
+                Debug.e("on click area turn_on_btn");
             }
-        };
+        });
         backEntity.attachChild(turn_on_btn);
         scene.attachChild(backEntity);
+
+        scene.registerTouchArea(switcher);
+        scene.registerTouchArea(turn_on_btn);
+        scene.setTouchAreaBindingOnActionDownEnabled(true);
         return scene;
     }
 
@@ -110,5 +134,10 @@ public class PhysicsActivity extends SimpleBaseGameActivity {
     @UiThread
     void showToast(String text) {
         Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public boolean onAreaTouched(TouchEvent pSceneTouchEvent, ITouchArea pTouchArea, float pTouchAreaLocalX, float pTouchAreaLocalY) {
+        return false;
     }
 }
